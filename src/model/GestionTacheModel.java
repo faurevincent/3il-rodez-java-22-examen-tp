@@ -3,6 +3,8 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import exception.TacheNonPresenteException;
+
 /**
  * Model permettant la gestion des taches de l'application
  */
@@ -38,5 +40,16 @@ public class GestionTacheModel {
     public void ajouterTache(String description, String titre, Priorite priorite) {
 		taches.add(new Tache(priorite, titre, description));
 	}
+    
+    /**
+     * Suppression d'une tache
+     * @param aSupprimer Tache a supprimer
+     */
+    public void supprimerTache(Tache aSupprimer) {
+    	if(aSupprimer == null || !taches.contains(aSupprimer)) {
+    		throw new TacheNonPresenteException("Cette tache n'existe pas.");
+    	}
+    	taches.remove(aSupprimer);
+    }
 	
 }
