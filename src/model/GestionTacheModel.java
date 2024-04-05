@@ -51,5 +51,16 @@ public class GestionTacheModel {
     	}
     	taches.remove(aSupprimer);
     }
+    
+    @Override
+    public String toString() {
+    	String aAfficher = "";
+    	
+    	for(Tache t : taches) {
+    		aAfficher += "TITRE : " + t.getTitre() + "\nDESCRIPTION : " + t.getDescription() + "\nNIVEAU DE PRIORITE : " + t.getPriorite() + "\n\n";
+    	}
+    	
+    	return aAfficher;
+    }
 	
 }

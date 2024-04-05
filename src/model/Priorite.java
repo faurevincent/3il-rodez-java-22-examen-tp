@@ -5,8 +5,24 @@ package model;
  */
 public enum Priorite {
 	
-	HAUTE,
-	MOYENNE,
-	BASSE;
+	HAUTE("Haute"),
+	MOYENNE("Moyenne"),
+	BASSE("Basse");
 
+	/**
+	 * Nom de la priorite
+	 */
+	private String nom;
+	
+	Priorite(String nom) {
+		this.nom = nom;
+	}
+
+	/**
+	 * Get nom de la priorite
+	 * @return nom
+	 */
+	public String getNom() {
+		return nom;
+	}
 }
