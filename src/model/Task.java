@@ -3,7 +3,9 @@ package model;
 /**
  * Une tache est représenter par un titre, une description, et un niveau de priorité
  */
-public class Tache {
+public class Task {
+	
+	private String id;
 
 	/**
 	 * Niveau de priorité de la tache
@@ -26,7 +28,7 @@ public class Tache {
 	 * @param titre Titre de la tache
 	 * @param description Description de la tache
 	 */
-	public Tache(Priorite priorite, String titre, String description) {
+	public Task(Priorite priorite, String titre, String description) {
 		super();
 		this.priorite = priorite;
 		this.titre = titre;
@@ -59,10 +61,10 @@ public class Tache {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(obj == null || obj.getClass() != Tache.class) {
+		if(obj == null || obj.getClass() != Task.class) {
 			return false;
 		}
-		Tache t = (Tache) obj;
+		Task t = (Task) obj;
 		return this.titre == t.titre && this.description == t.description && this.priorite == t.priorite;
 	}
 }

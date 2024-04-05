@@ -3,7 +3,7 @@ package controler;
 import exception.TacheNonPresenteException;
 import model.GestionTacheModel;
 import model.Priorite;
-import model.Tache;
+import model.Task;
 import vue.GestionTacheVue;
 
 /**
@@ -39,7 +39,7 @@ public class GestionTacheControler {
 	 * Suppression d'un tache
 	 * @param tache
 	 */
-	public void supprimer(Tache tache) throws TacheNonPresenteException {
+	public void supprimer(Task tache) throws TacheNonPresenteException {
 		gestionTacheModel.supprimerTache(tache);
 	}
 	
@@ -48,7 +48,7 @@ public class GestionTacheControler {
 	 * @param aModifier
 	 * @param titre
 	 */
-	public void modifierTitre(Tache aModifier, String titre) {
+	public void modifierTitre(Task aModifier, String titre) {
 		gestionTacheModel.getTache(aModifier).setTitre(titre);
 	}
 	
@@ -57,7 +57,7 @@ public class GestionTacheControler {
 	 * @param aModifier
 	 * @param description
 	 */
-    public void modifierDescription(Tache aModifier, String description) {
+    public void modifierDescription(Task aModifier, String description) {
     	gestionTacheModel.getTache(aModifier).setDescription(description);
 	}
 
@@ -66,7 +66,7 @@ public class GestionTacheControler {
      * @param aModifier
      * @param priorite
      */
-    public void modifierPriorite(Tache aModifier, Priorite priorite) {
+    public void modifierPriorite(Task aModifier, Priorite priorite) {
     	gestionTacheModel.getTache(aModifier).setPriorite(priorite);
     }
     

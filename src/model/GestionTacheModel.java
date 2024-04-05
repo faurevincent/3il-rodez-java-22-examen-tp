@@ -13,7 +13,7 @@ public class GestionTacheModel {
 	/**
 	 * List actuel des taches présentes
 	 */
-	private List<Tache> taches;
+	private List<Task> taches;
 
 	/**
 	 * Constructeur par défaut
@@ -28,7 +28,7 @@ public class GestionTacheModel {
 	 * @param titre
 	 */
 	public void ajouterTache(String description, String titre) {
-		taches.add(new Tache(Priorite.BASSE, titre, description));	
+		taches.add(new Task(Priorite.BASSE, titre, description));	
 	}
 	
 	/**
@@ -38,14 +38,14 @@ public class GestionTacheModel {
 	 * @param priorite
 	 */
     public void ajouterTache(String description, String titre, Priorite priorite) {
-		taches.add(new Tache(priorite, titre, description));
+		taches.add(new Task(priorite, titre, description));
 	}
     
     /**
      * Suppression d'une tache
      * @param aSupprimer Tache a supprimer
      */
-    public void supprimerTache(Tache aSupprimer) {
+    public void supprimerTache(Task aSupprimer) {
     	if(aSupprimer == null || !taches.contains(aSupprimer)) {
     		throw new TacheNonPresenteException("Cette tache n'existe pas.");
     	}
@@ -56,7 +56,7 @@ public class GestionTacheModel {
     public String toString() {
     	String aAfficher = "<html>";
     	
-    	for(Tache t : taches) {
+    	for(Task t : taches) {
     		aAfficher += "TITRE : " + t.getTitre() + "<br>DESCRIPTION : " + t.getDescription() + "<br>NIVEAU DE PRIORITE : " + t.getPriorite() + "<br><br>";
     	}
     	
@@ -68,8 +68,8 @@ public class GestionTacheModel {
      * @param tache
      * @return la tache
      */
-    public Tache getTache(Tache tache) {
-    	for(Tache t : taches) {
+    public Task getTache(Task tache) {
+    	for(Task t : taches) {
     		if(t.equals(tache)) {
     			return t;
     		}
