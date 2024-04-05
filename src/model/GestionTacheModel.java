@@ -54,13 +54,13 @@ public class GestionTacheModel {
     
     @Override
     public String toString() {
-    	String aAfficher = "";
+    	String aAfficher = "<html>";
     	
     	for(Tache t : taches) {
-    		aAfficher += "TITRE : " + t.getTitre() + "\nDESCRIPTION : " + t.getDescription() + "\nNIVEAU DE PRIORITE : " + t.getPriorite() + "\n\n";
+    		aAfficher += "TITRE : " + t.getTitre() + "<br>DESCRIPTION : " + t.getDescription() + "<br>NIVEAU DE PRIORITE : " + t.getPriorite() + "<br><br>";
     	}
     	
-    	return aAfficher;
+    	return aAfficher + "</html>";
     }
 	
     /**

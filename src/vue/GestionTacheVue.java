@@ -13,6 +13,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
+import javax.swing.SwingConstants;
 
 import controler.GestionTacheControler;
 import model.Priorite;
@@ -38,9 +39,9 @@ public class GestionTacheVue extends JPanel {
 		this.gestionTacheControler = gestionTacheControler;
 		
 		zoneTitre = new JTextField();
-		zoneTitre.setSize(50,10);
+		zoneTitre.setText("Titre");
 		zoneDescription = new JTextField();
-		zoneDescription.setSize(50,10);
+		zoneDescription.setText("Description");
 		boutonAjout = new JButton("Ajouter");
 		tache = new JLabel();
 		listPriorite = new JList<Priorite>(new Priorite[] {Priorite.BASSE, Priorite.MOYENNE, Priorite.HAUTE});
@@ -54,7 +55,6 @@ public class GestionTacheVue extends JPanel {
 			}
 		});
 		
-		tache.setText(gestionTacheControler.getTaches());
 		this.add(zoneTitre);
 		this.add(zoneDescription);
 		this.add(listPriorite);

@@ -70,6 +70,10 @@ public class GestionTacheControler {
     	gestionTacheModel.getTache(aModifier).setPriorite(priorite);
     }
     
+    /**
+     * Utiliser pour afficher les taches
+     * @return Les taches a afficher en string
+     */
     public String getTaches() {
     	return gestionTacheModel.toString();
     }

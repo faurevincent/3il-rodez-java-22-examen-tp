@@ -10,7 +10,7 @@ Ce document récapitule les réalisations effectuées dans le cadre du TP de ges
 - [x] Bouton "Ajouter".
 - [ ] Test unitaire associé.
 
-(Explication et justification de ce qui a été fait...)
+Sur l'interface est présent deux zone de saisie, une pour le titre et l'autre pour la description ainsi qu'une liste avec 3 choix de selection pour la priorite. J'ai fait au plus simple au vu du temps imparti.
 
 ### Modification d'une tâche
 
@@ -34,14 +34,14 @@ Ce document récapitule les réalisations effectuées dans le cadre du TP de ges
 - [ ] Mécanisme de filtrage ou de tri des tâches.
 - [ ] Test unitaire associé.
 
-(Explication et justification de ce qui a été fait...)
+Affichage des Taches est disponible avec l'actualisation après chaque ajout.
 
 ### Gestion des priorités
 
 - [x] Possibilité de définir la priorité lors de l'ajout ou de la modification de la tâche.
 - [ ] Test unitaire associé.
 
-Seulement lors de l'ajout, la modification n'est pas disponible
+Seulement lors de l'ajout, la modification n'est pas disponible.
 
 ### Possibilité d'évolution
 
