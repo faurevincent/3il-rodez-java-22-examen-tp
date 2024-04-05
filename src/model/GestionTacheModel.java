@@ -63,4 +63,17 @@ public class GestionTacheModel {
     	return aAfficher;
     }
 	
+    /**
+     * Recuperation d'une tache
+     * @param tache
+     * @return la tache
+     */
+    public Tache getTache(Tache tache) {
+    	for(Tache t : taches) {
+    		if(t.equals(tache)) {
+    			return t;
+    		}
+    	}
+    	return null;
+    }
 }

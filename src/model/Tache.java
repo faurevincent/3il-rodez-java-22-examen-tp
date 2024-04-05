@@ -56,4 +56,13 @@ public class Tache {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null || obj.getClass() != Tache.class) {
+			return false;
+		}
+		Tache t = (Tache) obj;
+		return this.titre == t.titre && this.description == t.description && this.priorite == t.priorite;
+	}
 }
